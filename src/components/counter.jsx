@@ -4,18 +4,23 @@ class Counter extends Component {
   state = {
     count: 0,
   };
+  style={
+      fontWight:"bold",
+      fontSize:30
+
+  }
   render() {
-    React.createElement("h1");
     return (
       <div>
-        <span>{this.formateData()}</span>
-        <button>Increment </button>
+        <span style={this.style} className="btn btn-primary m-2">{this.formateData()}</span>
+
+        <button className="btn btn-secondary btn-m">Increment </button>
       </div>
     );
   }
-  formateData(){
-      const {count} = this.state;
-      return count === 0 ? 'Zero' : count
+  formateData() {
+    const { count } = this.state;
+    return count === 0 ? "Zero" : count;
   }
 }
 
