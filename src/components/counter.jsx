@@ -5,24 +5,21 @@ class Counter extends Component {
     count: 0,
   };
 
-  constructor(){
-    super();
-    this.handalIncrement = this.handalIncrement.bind(this)
+  handalIncrement=()=> {
+    // console.log(product);
+    this.setState({count : this.state.count + 1 })
   }
 
-  handalIncrement() {
-    console.log("increment Clicked!", this);
-  }
   render() {
     return (
       <div>
         <span className={this.getBageClasses()}>{this.formateData()}</span>
 
         <button
-          onClick={this.handalIncrement}
+          onClick={()=> this.handalIncrement()}
           className="btn btn-secondary btn-m"
         >
-          Increment{" "}
+          Increment
         </button>
       </div>
     );
